@@ -13,13 +13,17 @@
 
     <link rel="stylesheet" href="styles.css" />   
     <link rel="icon" href="place-your-tab-icon-here"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!--link to font awesome icons-->
+
+    <!--link to font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  \
     <script src="https://use.fontawesome.com/3c290db908.js"></script>
     
+    <!-- link to gsap -->
     <script src="/[YOUR_DIRECTORY]/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 
+    <!-- link to jquery -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.58/dist/themes/light.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.58/dist/shoelace.js"></script>
     <link rel="stylesheet" href="path/to/shoelace/dist/themes/dark.css">
@@ -35,7 +39,6 @@
 <div class="ghostelement" id="top"> <!--ghost div for the menu link jumps--></div>
 
 <!--HEADER MENU-->
-
 
 <div class="logoHeader">
   <a href="#top"><img class="logo" src="images/SpotifyLogo.png" alt="Spotify Logo"></a> <!--logo and link jump to top--> 
@@ -55,7 +58,7 @@
       <sl-avatar style=""
       image="images/profilePic.png"
       alt="Profile Picture"
-    ></sl-avatar>
+    ></sl-avatar> <!-- shoelace element -->
   </div>
   
   <a href="#top"><img class="fade" src="images/fade1.png" alt="fade"></a> <!--logo and link jump to top--> 
@@ -117,7 +120,7 @@
 
 <div class= "albumSection">
 
-<!-- Navigation arrows -->  
+<!-- Navigation arrow -->  
 <a class="left" onclick="nextSlide(-1)">❮</a>  
 
   <a href="#albumBack"><img class="albumBack" src="images/albumBack.PNG"></a>
@@ -158,7 +161,8 @@
     <div class="title">Happier Than Ever</div>
     <div class="artist">Billie Eilish</div>
   </div>
-    
+
+<!--nav arrow-->
 <a class="right" onclick="nextSlide(1)">❯</a> 
 
 </div> 
@@ -245,6 +249,7 @@
     <li><a href="https://www.spotify.com/au/download/windows/" class="footerLink3">Free Mobile App</a></li>
   </ul>
   
+  <!-- gsap element -->
   <div class="socials">
     <sl-button class = "insta" href="https://www.instagram.com/spotify/" size="large" circle><sl-icon name="instagram"></sl-icon></sl-button>
     <sl-button class = "twitter" href="https://twitter.com/Spotify" size="large" circle><sl-icon name="twitter"></sl-icon></sl-button>
@@ -301,7 +306,7 @@ $(document).ready(function(){
 <script type="text/javascript">
   $(document).ready(function(){
     $(window).scroll(function(){
-      if($(this).scrollTop() > 100){
+      if($(this).scrollTop() > 80){
         $(".menu").css({"opacity" : "0"})
       }
       else {
