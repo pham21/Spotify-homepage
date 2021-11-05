@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Spotify</title>
+
+    <meta name="author" content="Leanne Pham">
+    <meta name="description" content="Spotify Website">
+    <meta name="keywords" content="music, listen, spotify, audio, podcast, artist, playlist, webplayer">
+
+    <link rel="stylesheet" href="styles.css" />   
+    <link rel="icon" href="place-your-tab-icon-here"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!--link to font awesome icons-->
+    <script src="https://use.fontawesome.com/3c290db908.js"></script>
+    
+    <script src="/[YOUR_DIRECTORY]/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.58/dist/themes/light.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.58/dist/shoelace.js"></script>
+    <link rel="stylesheet" href="path/to/shoelace/dist/themes/dark.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<!-------------------------------------------------HEADER------------------------------------------------------------------>
+
+<div class="ghostelement" id="top"> <!--ghost div for the menu link jumps--></div>
+
+<!--HEADER MENU-->
+
+
+<div class="logoHeader">
+  <a href="#top"><img class="logo" src="images/SpotifyLogo.png" alt="Spotify Logo"></a> <!--logo and link jump to top--> 
+  
+  <div class="topBlack">
+  </div>
+  
+  <div class="topNav" id="topBanner">
+  
+      <a href="https://accounts.spotify.com/en/status" class="profile", target="_blank">Profile</a>
+      <a href="" class="profilePic"><img src="images/profilePic.png" alt="Profile Picture" style="width:38px;height:38px;"></a>
+      <a href="" class="line">|</a>
+      <a href="#support">Support</a>
+      <a href="#download">Download</a>
+      <a href="#webPlayer">Web Player</a>
+      <a href="#premium">Premium</a>
+      <sl-avatar style=""
+      image="images/profilePic.png"
+      alt="Profile Picture"
+    ></sl-avatar>
+  </div>
+  
+  <a href="#top"><img class="fade" src="images/fade1.png" alt="fade"></a> <!--logo and link jump to top--> 
+  
+  </div>
+  
+
+<!-------------------------------------------------BUBBLE MENU------------------------------------------------->
+
+<div class= "menu">
+  <nav>   
+           <ul>
+              <li><a href="https://www.spotify.com/au/account/overview/" class="accountLink">Account</a></li> <!--side menu link to ghost divs-->
+              <li><a href="#top" class="logoutLink">Log out</a></li>
+          </ul>
+  </nav>  
+</div>
+
+
+<!-------------------------------------------------HERO VIDEO------------------------------------------------->
+
+<div class="ghostelement" id="hero"> <!--ghost div for the menu link jumps--></div>
+
+<div class= "hero">
+  <a href="#chillHero"><img class="chill" src="images/chillHero.gif" alt="Gif of Man Listening to Music"></a> <!--logo and link jump to top--> 
+  <a href="#danceHero"><img class="dance" src="images/danceHero.gif" alt="Gif of Man Listening to Music"></a> <!--logo and link jump to top--> 
+</div>
+
+
+<!-------------------------------------------------PREMIUM------------------------------------------------->
+
+<div class= "premiumSection">
+
+  <a href="#premiumBack"><img class="premiumBack" src="images/premiumBack.PNG"></a> <!--logo and link jump to top--> 
+  <div class="text">
+    <p class="firstPremium">3 months of Premium</p>
+    <p class="secondPremium">Free</p>
+    <p class="description1">Don’t miss ad-free music listening, offline playpack, and more.</p>
+    <a href="https://www.spotify.com/au/premium/"><button id="freeButton" class="premiumFree">GET 3 FREE MONTHS</button></a>
+    <a href="https://www.spotify.com/au/premium/#plans"><button id="planButton" class="premiumPlan">VIEW PLANS</button></a>
+  </div>
+
+</div>
+
+<div class="ghostelement" id="premium"> <!--ghost div for the menu link jumps--></div>
+
+<div class= "betaSection">
+
+  <a href="#betaBack"><img class="betaBack" src="images/betaBack.PNG"></a> <!--logo and link jump to top--> 
+  <div class="text2">
+    <p class="firstBeta">Listen together</p>
+    <p class="secondBeta">from anywhere</p>
+    <p class="thirdBeta">With Group Session</p>
+  </div>
+
+</div>
+
+<!-------------------------------------------------TOP ALBUMS------------------------------------------------->
+
+<div class= "albumSection">
+
+<!-- Navigation arrows -->  
+<a class="left" onclick="nextSlide(-1)">❮</a>  
+
+  <a href="#albumBack"><img class="albumBack" src="images/albumBack.PNG"></a>
+  <div class="text3">
+    <p class="firstAlbum">Discover today's</p>
+    <p class="secondAlbum">Top Albums</p>
+    <a href="https://open.spotify.com/playlist/7qWT4WcLgV6UUIPde0fqf9"><button id="streamButton" class="streamNow">STREAM NOW</button></a>
+  </div>
+
+<div class="slidercontainer">
+
+  <div class="mySlides">
+    <img src="images/drake.png">
+    <div class="title">Certified Lover Boy</div>
+    <div class="artist">Drake</div>
+  </div>
+
+  <div class="mySlides">
+    <img src="images/doja.PNG">
+    <div class="title">Planet Her</div>
+    <div class="artist">Doja Cat</div>
+  </div>
+    
+  <div class="mySlides">
+    <img src="images/montero.PNG">
+    <div class="title">MONTERO</div>
+    <div class="artist">Lil Nas X</div>
+  </div>
+
+  <div class="mySlides">
+    <img src="images/sour.png">
+    <div class="title">SOUR</div>
+    <div class="artist">Olivia Rodrigo</div>
+  </div>
+    
+  <div class="mySlides">
+    <img src="images/billie.PNG">
+    <div class="title">Happier Than Ever</div>
+    <div class="artist">Billie Eilish</div>
+  </div>
+    
+<a class="right" onclick="nextSlide(1)">❯</a> 
+
+</div> 
+
+</div>
+
+
+<!-------------------------------------------------WEB PLAYER------------------------------------------------->
+
+
+<div class="ghostelement" id="webPlayer"> <!--ghost div for the menu link jumps--></div>
+
+<div class= "playerSection">
+
+  <a href="#playerBack"><img class="playerBack" src="images/playerBack.PNG"></a> <!--logo and link jump to top--> 
+  <div class="text4">
+    <p class="firstPlayer">Jump back in</p>
+    <p class="description2">Pick up your music right where you left off.</p>
+    <a href="https://open.spotify.com/"><button id="playerButton" class="webPlayer">OPEN WEB PLAYER</button></a>
+  </div>
+
+</div>
+
+
+<!-------------------------------------------------DOWNLOAD------------------------------------------------->
+
+
+<div class="ghostelement" id="download"> <!--ghost div for the menu link jumps--></div>
+
+<div class= "downloadSection">
+
+  <a href="#downloadBack"><img class="downloadBack" src="images/downloadBack.PNG"></a> <!--logo and link jump to top--> 
+  <div class="text5">
+    <p class="firstDownload">Download</p>
+    <p class="description3">Play millions of songs on your device.</p>
+    <a href="https://www.spotify.com/au/download/other/"><button id="computerButton" class="downloadButton">COMPUTER</button></a>
+    <a href="https://apps.apple.com/us/app/spotify-new-music-and-podcasts/id324684580"><button id="mobileButton" class="downloadButton">MOBILE</button></a>
+    <a href="https://www.spotify.com/au/download/windows/"><button id="otherButton" class="download2Button">OTHER</button></a>
+  </div>
+
+</div>
+
+
+<!-------------------------------------------------SUPPORT------------------------------------------------->
+
+
+<div class="ghostelement" id="support"> <!--ghost div for the menu link jumps--></div>
+
+<div class= "supportSection">
+
+  <a href="#supportBack"><img class="supportBack" src="images/supportBack.PNG"></a> <!--logo and link jump to top--> 
+  <div class="text6">
+    <p class="firstSupport">Need Help?</p>
+    <p class="description4">Can’t remember login details? Can’t reset password?</p>
+    <a href="https://support.spotify.com/au/?_gl=1*1shhrsk*_gcl_aw*R0NMLjE2MzIzMTE1MzYuQ2owS0NRandxS3VLQmhDeEFSSXNBQ2Y0WHVHNXp0cVI0OHY5TFJlbDg1QTBoVm1vNm1CbENLMTl1b2VhMEZkZkJrVC1XUXpkLS1sZ2xjc2FBaHBiRUFMd193Y0I.*_gcl_dc*R0NMLjE2MzIzMTE1MzYuQ2owS0NRandxS3VLQmhDeEFSSXNBQ2Y0WHVHNXp0cVI0OHY5TFJlbDg1QTBoVm1vNm1CbENLMTl1b2VhMEZkZkJrVC1XUXpkLS1sZ2xjc2FBaHBiRUFMd193Y0I.&_ga=2.135318961.1281412369.1635826112-1348876853.1623580415&_gac=1.12523846.1632311536.Cj0KCQjwqKuKBhCxARIsACf4XuG5ztqR48v9LRel85A0hVmo6mBlCK19uoea0FdfBkT-WQzd--lglcsaAhpbEALw_wcB"><button id="supportButton" class="contactSupport">CONTACT SUPPORT</button></a>
+  </div>
+
+</div>
+
+<!-------------------------------------------------FOOTER------------------------------------------------->
+
+<div class="footerSection"> <!-- text block seperate from main body paragraphs at bottom-->
+
+  <a href="#footerBack"><img class="footerBack" src="images/footerBack.PNG"></a> <!--logo and link jump to top--> 
+  
+  <ul class="companyColumn">
+    <li><p class="footerHeader">COMPANY</p></li>
+    <li><a href="https://www.spotify.com/au/about-us/contact/" class="footerLink1">About</a></li>
+    <!-- <li><a href="https://www.lifeatspotify.com/" class="footerLink2">Jobs</a></li> -->
+    <li><a href="https://newsroom.spotify.com/" class="footerLink3">For the Record</a></li>
+  </ul>
+  <ul class="communitiesColumn">
+    <li><p class="footerHeader">COMMUNITIES</p></li>
+    <li><a href="https://artists.spotify.com" class="footerLink1">For Artists</a></li>
+    <li><a href="https://developer.spotify.com" class="footerLink2">Developers</a></li>
+    <li><a href="https://ads.spotify.com/en-AU/" class="footerLink3">Advertising</a></li>
+    <li><a href="https://investors.spotify.com/home/default.aspx" class="footerLink4">Investors</a></li>
+    <li><a href="https://spotifyforvendors.com" class="footerLink5">Vendors</a></li>
+  </ul>
+  <ul class="linksColumn">
+    <li><p class="footerHeader">USEFUL LINKS</p></li>
+    <li><a href="https://support.spotify.com/au/" class="footerLink1">Support</a></li>
+    <li><a href="https://www.spotify.com/au/download/windows/" class="footerLink2">Web Player</li>
+    <li><a href="https://www.spotify.com/au/download/windows/" class="footerLink3">Free Mobile App</a></li>
+  </ul>
+  
+  <div class="socials">
+    <sl-button class = "insta" href="https://www.instagram.com/spotify/" size="large" circle><sl-icon name="instagram"></sl-icon></sl-button>
+    <sl-button class = "twitter" href="https://twitter.com/Spotify" size="large" circle><sl-icon name="twitter"></sl-icon></sl-button>
+    <sl-button class = "fb" href="https://www.facebook.com/SpotifyAustralia/" size="large" circle><sl-icon name="facebook"></sl-icon></sl-button>
+  </div>
+</div>
+
+<!-------------------------------------------------JAVSCRIPT------------------------------------------------->
+
+<!-- Scroll chill to dance change -->
+<script type="text/javascript">
+$(document).ready(function(){
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 120){
+            $(".chill").css({"opacity" : "0"})
+          }
+          else {
+            $(".chill").css({"opacity" : "1"})
+          }
+})
+})
+</script>
+
+<!-- scroll body background change -->
+<script type="text/javascript">
+$(document).ready(function(){       
+        var scroll_pos = 0;
+        $(document).scroll(function() {
+            scroll_pos = $(this).scrollTop();
+            if(scroll_pos > 120) {
+                $("body").css('background-color', '#0414db');
+            } else {
+                $("body").css('background-color', '#e9e5fc');
+            }
+        });
+    });
+</script>
+
+<!-- top banner opacity change w scroll -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(window).scroll(function(){
+      if($(this).scrollTop() > 120){
+        $(".topBlack").css({"opacity" : "1"})
+      }
+      else {
+        $(".topBlack").css({"opacity" : "0"})
+      }
+    })
+  })
+</script>
+
+<!-- menu change opacity with scroll -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(window).scroll(function(){
+      if($(this).scrollTop() > 100){
+        $(".menu").css({"opacity" : "0"})
+      }
+      else {
+        $(".menu").css({"opacity" : "1"})
+      }
+    })
+  })
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+<!-------------------------------------------------IMAGE REFERNCES------------------------------------------------->
+
+<!-- 
+    
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fnewsroom.spotify.com%2Fmedia-kit%2Flogo-and-brand-assets%2F&psig=AOvVaw0oxYVKx7fpme9TJwloHqqL&ust=1634262619160000&source=images&cd=vfe&ved=0CAwQjhxqFwoTCID9ouvkyPMCFQAAAAAdAAAAABAD
+
+Mettam, Tom. 2020. "need help Understanding javascript gallery code". Stackoverflow. https://stackoverflow.com/questions/63331606/need-help-understanding-javascript-gallery-code
+
+Sebastian. 2018. "Dynamically change background color on scroll". Stackoverflow. https://stackoverflow.com/questions/52637835/dynamically-change-background-color-on-scroll
+
+Bonnett, Juan. 2016. "Increase element opacity when user scrolls down the page". Stackoverflow. https://stackoverflow.com/questions/34831602/increase-element-opacity-when-user-scrolls-down-the-page
+
+
+
+
+
+
+
+-->
