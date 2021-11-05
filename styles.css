@@ -1,0 +1,1326 @@
+* {
+    box-sizing: border-box;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "AvenirNextLTPro-Regular";
+    src: url("../fonts/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro-Demi";
+    src: url("../fonts/AvenirNextLTPro-Demi.otf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro-Bold";
+    src: url("../fonts/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: "guildof";
+    src: url("../fonts/guildof.ttf");
+}
+
+/* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: #e9e5fc;
+  }
+
+/* ================================================HEADER============================================================= */
+
+/* =========== HEADER BANNER =========== */
+
+.logoHeader {
+  z-index: 150;
+  position: relative;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+.logo { 
+  width: 135px;
+  margin-top: 18px;
+  margin-left: 9%;
+  position: absolute;
+  z-index: 300;
+}
+
+.topBlack {
+  overflow: hidden;
+  width: 100%;
+  z-index: 100;
+  background-color: black;
+  height: 80px;
+  position: relative;
+  transition: 0.5s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+.topNav {
+  overflow: hidden;
+  width: 100%;
+  padding-right: 7%;
+  z-index: 300;
+  position: absolute;
+  margin-top: -80px;
+  color: white;
+}
+.topNav a {
+  float: right;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 70px;
+  padding: 2px 22px 0px 22px;
+  visibility: visible;
+  font-family: 'AvenirNextLTPro-Demi';
+}
+
+ul li {
+  font-family: 'AvenirNextLTPro-Demi';
+}
+
+.topNav a:hover {
+  font-weight: bold;
+  color: rgb(87, 253, 54);
+}
+.topNav a.active {
+  color: white;
+}
+a.line {
+  pointer-events: none;
+  cursor: default;
+  color: white;
+  padding-right: 35px;
+}
+
+a.profilePic {
+  pointer-events: none;
+  cursor: default;
+  margin-top: 14px;
+  padding: 0px 0px;
+  visibility: hidden;
+}
+a.profile {
+  color: white;
+}
+
+sl-avatar {
+  margin-top: 18px;
+  padding: 0px 0px;
+  margin-right: 13vw;
+  right: 0;
+  position: absolute;
+  --size: 40px;
+}
+
+.fade {
+  position: absolute;
+  display: block;
+  width:100%;
+  margin-top: 0;
+  height: 17vw;
+  opacity: 0.5;
+  z-index: 80;
+  margin-top: -80px;
+}
+
+/* ========== BUBBLE MENU ========== */
+
+.menu {
+  transition: 0.2s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.2s;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+}
+
+nav { /* menu bubble */
+  animation-timing-function: ease-in-out;
+  background-color: white;
+  position: absolute;
+  text-decoration: none; /* no underline */
+  right: 0px;
+  z-index: 300;
+  content: '';
+  padding-right: 65px;
+  padding-bottom: 5px;
+  margin-right: 6%;
+  border-radius: 5px;
+  margin-top: 60px;
+  border: none;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+nav ul li { /* side menu box */ 
+  padding: 6px;
+  margin-top: 0px;
+  padding-left: -40px;
+  display: block; /*to stack downwards in line*/
+  background-color: white;
+  text-decoration: none; /* no underline */
+}
+
+.accountLink {
+  color: black;
+}
+.logoutLink {
+  color: grey;
+}
+
+ul li a .logoutLink {
+  color: gray;
+}
+
+
+/* ============HERO VIDEO============= */
+
+.chill {
+  display: block;
+  position: absolute;
+  left:0;
+  right:55px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 80px;
+  width: 60vw;
+  z-index: 40;
+  pointer-events: none;
+  cursor: default;
+
+}
+.dance {
+  display: block;
+  position: absolute;
+  left:0;
+  right:55px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 80px;
+  width: 60vw;
+  z-index: 39;
+  pointer-events: none;
+  cursor: default;
+}
+
+
+/* ================================================MAIN BODY============================================================= */
+
+
+.ghostelement { /* so nav links show full content */
+  width: auto;
+  height: 0px;
+}
+
+/* ============PREMIUM============= */
+
+.premiumSection {
+  text-align: center;
+}
+.premiumBack {
+  max-width:100%;
+  max-height:100%;
+  z-index: 50;
+  margin-top: 55vw;
+  position: relative;
+  pointer-events: none;
+  cursor: default;
+}
+
+.text { 
+  position: absolute;
+  top: 53vw;
+  z-index: 51;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  color: rgb(255, 233, 245);
+  font-size: 6vw;
+  font-family: 'AvenirNextLTPro-Bold';
+  font-weight: 1000;
+  margin-top: 10vw;
+}
+.secondPremium {
+  margin-top: -5.9vw;
+}
+.description1 {
+  font-size: 17px;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: normal;
+  margin-top: -3.3vw;
+  color: rgb(255, 238, 247);
+}
+
+.premiumFree {
+  height: 53px;
+  width: 14vw;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Demi";
+  color: #dd5a90;
+  background-color: rgb(255, 233, 245);
+  cursor: pointer;
+  border: none;
+  border-radius: 55px;
+  box-shadow: rgba(68, 68, 68, 0.24) 0px 3px 8px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  margin-top: 2.5vw;
+  text-decoration: none;
+}
+
+.premiumPlan {
+  height: 53px;
+  width: 14vw;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Demi";
+  color: rgb(255, 238, 247);
+  background-color: #e46097;
+  cursor: pointer;
+  border: solid;
+  border-color: rgb(255, 238, 247);
+  border-radius: 55px;
+  box-shadow: rgba(68, 68, 68, 0.15) 0px 3px 9px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  display: block;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 14px;
+  text-decoration: transparent;
+}
+
+button:hover { /* all buttons in sections scale in size when hover */
+  transform: scale(1.06);
+  transition: .15s ease-in-out 0s;
+}
+
+
+/* ============GROUP LISTEN============= */
+
+.betaBack {
+  max-width:100%;
+  max-height:100%;
+  z-index: 52;
+  top: -5px;
+  position: relative;
+  pointer-events: none;
+  cursor: default;
+}
+
+.text2 { 
+  position: absolute;
+  z-index: 53;
+  color: rgb(193, 241, 197);
+  font-size: 5.3vw;
+  font-family: 'AvenirNextLTPro-Bold';
+  font-weight: 1000;
+  margin-top: -43vw;
+  margin-left: 6.5vw;
+}
+.secondBeta {
+  margin-top: -4.8vw;
+}
+.thirdBeta {
+  margin-top: -4.8vw;
+}
+
+
+/* ============TOP ALBUMS============= */
+
+
+.albumBack {
+  max-width:100%;
+  max-height:100%;
+  z-index: 53;
+  top: -9px;
+  position: relative;
+  pointer-events: none;
+  cursor: default;
+}
+
+.text3 { 
+  position: absolute;
+  z-index: 55;
+  color:#a5ecea;
+  font-size: 5.3vw;
+  font-family: 'AvenirNextLTPro-Bold';
+  font-weight: 1000;
+  margin-top: -42vw;
+  margin-left: 47vw;
+}
+.secondAlbum {
+  margin-top: -5vw;
+  color: #004182;
+}
+
+.streamNow { /* button */
+  height: 52px;
+  width: 11vw;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Demi";
+  color: #004182;
+  background-color: #a5ecea;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  box-shadow: rgba(61, 61, 61, 0.24) 0px 3px 8px;
+  display: block;
+  margin-top: -3vw;
+  margin-left: 0.5vw;
+  text-decoration: none;
+}
+
+/* ============ALBUM GALLERY============= */
+
+.mySlides {  
+  display: none; 
+  position: absolute;
+  margin-left: 8vw;
+  margin-top: -39vw;
+  z-index: 90;
+}  
+.mySlides img {  
+    width: 19vw; 
+    height: 19vw; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    pointer-events: none;
+    cursor: default;
+}  
+.slidercontainer {  
+  max-width: 20%;  
+  position: absolute;  
+  margin: auto;  
+}  
+
+.left, .right {  
+  cursor: pointer;  
+  position: absolute;    
+  width: auto;  
+  padding: 16px;    
+  color: transparent;
+  font-size: 4vw;  
+  z-index: 100;
+  float: left;
+  margin-left: 15vw;
+  background: none;
+}  
+.left {
+  margin-top: 9vw;
+}
+.right {
+  margin-top: -15vw;
+}
+a.left:hover, .a:left:focus {
+  outline: none;
+  display: none;
+  visibility: hidden;
+  }
+a.right:hover, .a:right:focus {
+  outline: none;
+  display: none;
+  visibility: hidden;
+}
+    
+.title {  
+  color: #004182;  
+  font-size: 20px;  
+  padding: 13px 0px 8px 0px;   
+  position: absolute;  
+  width: 100%;   
+  font-family: 'AvenirNextLTPro-Demi';
+}  
+.artist {  
+  color: #004182;  
+  font-size: 15px;  
+  padding: 43px 0px 8px 0px;  
+  position: absolute;    
+  width: 100%;
+  font-family: 'AvenirNextLTPro-Regular';
+  }  
+
+  
+/* ============WEB PLAYER============= */
+
+.playerSection {
+  text-align: center;
+}
+
+.playerBack {
+  max-width:100%;
+  max-height:100%;
+  z-index: 52;
+  top: -13px;
+  position: relative;
+  pointer-events: none;
+  cursor: default;
+}
+
+.text4 { 
+  position: absolute;
+  top: 53vw;
+  z-index: 90;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  color: #24fb6c;
+  font-size: 6.1vw;
+  font-family: 'AvenirNextLTPro-Bold';
+  font-weight: 1000;
+  margin-top: 186vw;
+}
+.description2 {
+  font-size: 17px;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: normal;
+  margin-top: -3.1vw;
+  color: #24fb6c;
+}
+
+.webPlayer {
+  height: 52px;
+  width: 14vw;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Demi";
+  color: #3242d3;
+  background-color: #24fb6c;
+  cursor: pointer;
+  border: none;
+  border-radius: 55px;
+  box-shadow: rgba(54, 54, 54, 0.24) 0px 3px 8px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  margin-top: 2.4vw;
+  text-decoration: none;
+}
+
+
+/* ============DOWNLOAD============= */
+
+.downloadSection {
+  text-align: center;
+}
+
+.downloadBack {
+  max-width:100%;
+  max-height:100%;
+  z-index: 55;
+  top: -17px;
+  position: relative;
+  pointer-events: none;
+  cursor: default;
+}
+
+.text5 { 
+  position: absolute;
+  top: 53vw;
+  z-index: 90;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  color: #3c44e3;
+  font-size: 6.2vw;
+  font-family: 'AvenirNextLTPro-Bold';
+  font-weight: 1000;
+  margin-top: 242vw;
+}
+
+.description3 {
+  font-size: 17px;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: normal;
+  margin-top: -3.5vw;
+  color: #3c44e3;
+}
+
+.downloadButton {
+  height: 52px;
+  width: 13vw;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Demi";
+  color: #fbc404;
+  background-color: rgb(255, 252, 233);
+  cursor: pointer;
+  border: none;
+  border-radius: 55px;
+  box-shadow: rgba(54, 54, 54, 0.24) 0px 3px 8px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  margin-top: 2.4vw;
+  text-decoration: none;
+  z-index: 200;
+}
+
+#mobileButton {
+  margin-top: 12px;
+}
+
+.download2Button {
+  height: 52px;
+  width: 13vw;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Demi";
+  color: rgb(255, 252, 233);
+  background-color: #eebb04;
+  cursor: pointer;
+  border: solid;
+  border-color: rgb(255, 252, 233);
+  border-radius: 55px;
+  box-shadow: rgba(31, 31, 31, 0.15) 0px 3px 9px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  display: block;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 12px;
+  text-decoration: transparent;
+  z-index: 200;
+}
+
+
+/* ============SUPPORT============= */
+
+.supportSection {
+  text-align: center;
+}
+
+.supportBack {
+  max-width:100%;
+  max-height:100%;
+  z-index: 60;
+  top: -24px;
+  position: relative;
+  pointer-events: none;
+  cursor: default;
+}
+
+.text6 { 
+  position: absolute;
+  top: 53vw;
+  z-index: 90;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  color: black;
+  font-size: 6vw;
+  font-family: 'AvenirNextLTPro-Bold';
+  font-weight: 1000;
+  margin-top: 296.3vw;
+}
+
+.description4 {
+  font-size: 17px;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: normal;
+  margin-top: -3.3vw;
+  color: black;
+}
+
+.contactSupport {
+  height: 52px;
+  width: 14vw;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Demi";
+  color: #1ddd67;
+  background-color: white;
+  cursor: pointer;
+  border: solid;
+  border-color: #1ddd67;
+  border-radius: 55px;
+  box-shadow: rgba(179, 179, 179, 0.15) 0px 3px 9px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  margin-top: 2.3vw;
+  text-decoration: none;
+}
+
+/* ==================================FOOTER===================================================================================== */
+
+.footerBack {
+  max-width:100%;
+  max-height:auto;
+  z-index: 63;
+  margin-top: -27px;
+  position: relative;
+  pointer-events: none;
+  cursor: default;
+}
+
+.footerSection {
+  position: relative;
+  display: table;
+  text-decoration: none;
+}
+.footerSection:after { /* close box off for next section */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.companyColumn, .communitiesColumn, .linksColumn {
+  z-index: 95;
+  margin-top: -34.5vw;
+  position: absolute;
+  width: 30%;
+  display: block;
+}
+
+.footerHeader {
+  font-size: 14px;
+  font-family: 'AvenirNextLTPro-Bold';
+  color: rgb(139, 139, 139);
+}
+
+.footerLink1, .footerLink2, .footerLink3, .footerLink4, .footerLink5 {
+  font-size: 17px;
+  font-family: 'AvenirNextLTPro-Demi';
+  color: white; /* blue colors for links to white */
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.companyColumn {
+  margin-left: 20vw;
+}
+
+.communitiesColumn {
+  margin-left: 35vw;
+}
+
+.linksColumn {
+  margin-left: 50vw;
+}
+
+li{
+  margin-top: 30px;
+}
+
+sl-button {
+  position: absolute;
+  z-index: 80;
+  margin-top: 3.7vw;
+  top: 0;
+  right: 0;
+}
+
+.insta {
+  margin-right: 16.5vw;
+}
+
+.twitter {
+  margin-right:12vw;
+}
+
+.fb {
+  margin-right: 7.5vw;
+}
+
+
+/* ==================================RESPONSIVE DESIGN===================================================================================================================================== */
+
+
+/* ===== DESKTOP HD: Media queries for most HD desktops ========================================================================= */
+@media only screen and (max-width: 2736px) {
+}
+@media only screen and (max-width: 1420px) {  
+  
+}
+
+/* ===== SMALL DESKTOP: Media queries for laptop/small desktop ========================================================================= */
+@media only screen and (max-width: 1366px) { 
+  
+/* HEADER */
+
+sl-avatar {
+  margin-right: 11em;
+}
+
+/* BODY */
+
+.premiumBack {
+  margin-top: 55vw;
+}
+
+.premiumFree {
+  font-size: 13px;
+  height: 50px;
+  width: 15vw;
+}
+
+.premiumPlan {
+  font-size: 13px;
+  height: 50px;
+  width: 15vw;
+}
+.webPlayer {
+  font-size: 13px;
+  height: 50px;
+  width: 15vw;
+}
+
+.text5 {
+  top: 51vw;
+}
+
+.downloadButton {
+  font-size: 13px;
+  height: 50px;
+  width: 14vw;
+}
+
+.download2Button {
+  font-size: 13px;
+  height: 50px;
+  width: 14vw;
+}
+
+.text6 { 
+  top: 52vw;
+}
+
+.contactSupport {
+  font-size: 13px;
+  height: 50px;
+  width: 15vw;
+}
+
+/* FOOTER */
+
+.footerHeader {
+  font-size: 12px;
+}
+
+.footerLink1, .footerLink2, .footerLink3, .footerLink4, .footerLink5 {
+  font-size: 15px;
+}
+
+li{
+  margin-top: 20px;
+}
+
+sl-button {
+  position: absolute;
+  z-index: 80;
+  margin-top: 3.7vw;
+  top: 0;
+  right: 0;
+}
+
+.insta {
+  margin-right: 18vw;
+}
+
+.twitter {
+  margin-right: 12vw;
+}
+
+.fb {
+  margin-right: 6vw;
+}
+
+}
+
+/* ===== TABLET: Media queries for verticle and horizontal ========================================================================= */
+@media only screen and (max-width: 1024px) { 
+
+/* HEADER */
+
+.logo { 
+  width: 120px;
+  margin-top: 19px;
+  margin-left: 6%;
+}
+
+sl-avatar {
+  margin-right: 10em;
+}
+
+.topNav {
+  margin-right: 0%;
+}
+
+.topNav a {
+  font-size: 16px;
+  padding: 2px 15px;
+}
+
+/* BODY */
+
+.premiumBack {
+  margin-top: 57vw;
+}
+
+.description1 {
+  font-size: 15px;
+}
+
+.premiumFree {
+  font-size: 11px;
+  height: 45px;
+  width: 18vw;
+}
+
+.premiumPlan {
+  font-size: 11px;
+  height: 45px;
+  width: 18vw;
+  margin-top: 11px;
+}
+
+.text {
+  top: 54vw;
+}
+
+.webPlayer {
+  font-size: 11px;
+  height: 45px;
+  width: 16vw;
+}
+
+.description2 {
+  font-size: 15px;
+}
+
+.text2 {
+  margin-top: -42vw;
+  z-index: 80;
+}
+
+.streamNow {
+  height: 45px;
+  width: 15vw;
+  font-size: 11px;
+  margin-left: 0.3vw;
+}
+
+.text4 { 
+  top: 54vw;
+}
+
+.text5 {
+  top: 51vw;
+}
+
+.description3 {
+  font-size: 15px;
+}
+
+.downloadButton {
+  font-size: 11px;
+  height: 43px;
+  width: 16vw;
+}
+
+#mobileButton {
+    margin-top: 9px;
+  }
+
+.download2Button {
+  font-size: 11px;
+  height: 43px;
+  width: 16vw;
+  margin-top: 9px;
+}
+
+.text6 { 
+  top: 54vw;
+}
+.contactSupport {
+  font-size: 11px;
+  height: 45px;
+  width: 16vw;
+}
+
+.description4 {
+  font-size: 15px;
+}
+
+/* FOOTER */
+
+.companyColumn, .communitiesColumn, .linksColumn {
+  margin-top: -35vw;
+}
+
+.footerHeader {
+  font-size: 11px;
+}
+
+.footerLink1, .footerLink2, .footerLink3, .footerLink4, .footerLink5 {
+  font-size: 13px;
+}
+
+li{
+  margin-top: 15px;
+}
+
+sl-button {
+  position: absolute;
+  z-index: 80;
+  margin-top: 3vw;
+  top: 0;
+  right: 0;
+}
+
+.insta {
+  margin-right: 20vw;
+}
+
+.twitter {
+  margin-right: 13vw;
+}
+
+.fb {
+  margin-right: 6vw;
+}
+
+}
+
+/* ===== TABLET: Media queries for verticle and horizontal ========================================================================= */
+@media only screen and (max-width: 768px) { 
+
+/* HEADER */
+
+.logo { 
+  width: 110px;
+  margin-top: 20px;
+  margin-left: 6%;
+}
+  
+sl-avatar {
+  margin-right: 7em;
+}
+
+.topNav a {
+  font-size: 15px;
+  padding: 2px 8px;
+}
+
+/* BODY */
+
+.premiumBack {
+  margin-top: 60vw;
+}
+
+.text { 
+  top: 54vw;
+}
+
+.description1 {
+  font-size: 12px;
+}
+
+.premiumFree {
+  font-size: 11px;
+  height: 43px;
+  width: 20vw;
+}
+
+.premiumPlan {
+  font-size: 11px;
+  height: 43px;
+  width: 20vw;
+}
+
+.mySlides {
+  margin-top: -41vw;
+}
+
+.title {
+  font-size: 11px;
+  padding-top: 3px;
+}
+.artist {   
+  font-size: 10px;  
+  padding-top: 19px;
+}
+
+.text2 {
+  margin-top: -41vw;
+  z-index: 80;
+}
+
+.text3 {
+  margin-top: -41vw;
+}
+
+.streamNow {
+  height: 35px;
+  width: 17vw;
+  font-size: 10px;
+  margin-left: 0.3vw;
+}
+
+.webPlayer {
+  font-size: 11px;
+  height: 40px;
+  width: 18vw;
+}
+
+.description2 {
+  font-size: 12px;
+}
+
+.text4 { 
+  top: 57vw;
+}
+
+.text5 {
+  font-size: 6vw;
+  top: 54vw;
+}
+
+.description3 {
+  font-size: 12px;
+}
+
+.downloadButton {
+  font-size: 11px;
+  height: 36px;
+  width: 18vw;
+}
+
+#mobileButton {
+    margin-top: 7px;
+  }
+
+.download2Button {
+  font-size: 11px;
+  height: 36px;
+  width: 18vw;
+  margin-top: 7px;
+}
+
+.text6 { 
+  top: 55vw;
+}
+.contactSupport {
+  font-size: 11px;
+  height: 40px;
+  width: 19vw;
+}
+
+.description4 {
+  font-size: 12px;
+}
+
+
+/* FOOTER */
+
+.companyColumn, .communitiesColumn, .linksColumn {
+  margin-top: -34.5vw;
+}
+
+.footerHeader {
+  font-size: 10px;
+}
+
+.footerLink1, .footerLink2, .footerLink3, .footerLink4, .footerLink5 {
+  font-size: 12px;
+}
+
+li{
+  margin-top: 10px;
+}
+
+sl-button {
+  margin-top: 0vw;
+  visibility: hidden;
+}
+
+.insta {
+  margin-right: 20vw;
+}
+
+.twitter {
+  margin-right: 12vw;
+}
+
+.fb {
+  margin-right: 4vw;
+}
+
+}
+
+/* ===== MOBILE: Media queries for small mobile resolution. ========================================================================= */
+@media only screen and (max-width: 640px) { 
+
+/* HEADER */
+
+.topBlack {
+  height:58px;
+}
+
+.topNav {
+  height: 100px;
+}
+.logo { 
+  width: 100px;
+  margin-top: 14px;
+  margin-left: 4%;
+}
+
+sl-avatar {
+  margin-right: 2em;
+  margin-top: 35px;
+  --size: 33px;
+}
+nav {
+  margin-top: 60px;
+}
+.topNav a {
+  visibility: hidden;
+  height: 60px;
+}
+
+/* BODY */
+
+.premiumBack {
+  margin-top: 63vw;
+}
+
+.text { 
+  top: 60vw;
+}
+
+.description1 {
+  font-size: 11px;
+}
+
+.premiumFree {
+  font-size: 10px;
+  height: 35px;
+  width: 21vw;
+}
+
+.premiumPlan {
+  font-size: 10px;
+  height: 35px;
+  width: 21vw;
+  margin-top: 8px;
+}
+
+.text2 {
+  margin-left: 5.5vw;
+}
+
+.webPlayer {
+  font-size: 10px;
+  height: 35px;
+  width: 21vw;
+}
+
+.description2 {
+  font-size: 11px;
+}
+
+.text4 { 
+  top: 58.5vw;
+}
+
+.text5 { 
+  top: 56vw;
+}
+
+.description3 {
+  font-size: 11px;
+}
+
+.downloadButton {
+  font-size: 10px;
+  height: 33px;
+  width: 19vw;
+}
+
+#mobileButton {
+    margin-top: 7px;
+  }
+
+.download2Button {
+  font-size: 10px;
+  height: 33px;
+  width: 19vw;
+  margin-top: 7px;
+}
+
+.text6 { 
+  top: 58.5vw;
+}
+.contactSupport {
+  font-size: 10px;
+  height: 35px;
+  width: 21vw;
+}
+
+.description4 {
+  font-size: 10px;
+}
+
+/* FOOTER */
+
+.companyColumn, .communitiesColumn, .linksColumn {
+  margin-top: -35vw;
+}
+
+.footerHeader {
+  font-size: 8px;
+}
+
+.footerLink1, .footerLink2, .footerLink3, .footerLink4, .footerLink5 {
+  font-size: 10px;
+}
+
+li{
+  margin-top: 6px;
+}
+
+.companyColumn {
+  margin-left: 17vw;
+}
+
+.communitiesColumn {
+  margin-left: 32vw;
+}
+
+.linksColumn {
+  margin-left: 47vw;
+}
+
+sl-button {
+  visibility: hidden;
+}
+
+}
